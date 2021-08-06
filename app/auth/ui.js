@@ -25,6 +25,8 @@ const onSignInSuccess = function (response) {
   // console.log('Super')
   $('#status').text('Thank you for signing in', response.user.email)
   // console.log(response)
+  // very important store the user token
+  store.token = response.user.token
   $('#sign-in').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
