@@ -1,17 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>gracelli</h1>
+
+    <div class="dashboard">
+      <h5 id="dashboard-title">Dashboard</h5>
+      <h2 id="status"></h2>
+    </div>
+
+    <!-- Sign Up -->
+    <!-- <h3>Sign Up</h3> -->
+    <form id="sign-up">
+      <!-- <label class="form-label">your username</label> -->
+      <input name="credentials[email]" type="text" value="your email" autocomplete="off">
+      <input name="credentials[password]" type="password" autocomplete="off">
+      <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+      <input type="submit" value="Sign Up" class="nav-button">
+    </form>
+    <!-- Sign In -->
+    <!-- <h3>Sign In</h3> -->
+    <form id="sign-in">
+      <input name="credentials[email]" type="text" autocomplete="off">
+      <input name="credentials[password]" type="password" autocomplete="off">
+      <input type="submit" value="Sign In" class="nav-button">
+    </form>
+    <!-- Sign Out -->
+    <!-- <h3>Sign Out</h3> -->
+    <div id="support-sign-out">
+      <button id="sign-out" type="button" class="nav-button">Sign Out</button>
+    </div>
+    <!-- Change password -->
+    <!-- <h3>Change password</h3> -->
+    <form id="change-password">
+      <input style="width:100%" name="passwords[old]" type="password" autocomplete="off">
+      <input style="width:100%" name="passwords[new]" type="password" autocomplete="off">
+      <input type="submit" value="Change password" class="nav-button">
+    </form>
+
+    <!-- Products -->
+    <!-- <h4>New Product</h4> -->
+    <div id="show-new-product">
+      <button id="new-product" type="button" class="nav-button">New Product</button>
+    </div>
+
+    <!-- <h4>Get All Products</h4> -->
+    <div id="showcase-all-products">
+      <button id="all-products" type="button" class="nav-button">See All Products</button>
+    </div>
+
+</body>
+
 </html>
