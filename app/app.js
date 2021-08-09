@@ -14,6 +14,5 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   // product specific AJAX
-  $('#new-product').on('click', authEvents.onCreateGame)
-  $('#all-products').on('click', authEvents.onGetGames)
+  $('#create-product-form').on('submit', authEvents.onCreateNewProduct)
 })

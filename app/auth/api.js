@@ -4,6 +4,9 @@
 const appCurrentLink = require('./../config')
 const store = require('./../store')
 
+// turn debugging ON/OFF
+const debugApi = true
+
 const signUp = function (data) {
   // console.log(data)
   // console.log(`This is the current link ${appCurrentLink.apiUrl}`)
@@ -44,10 +47,32 @@ const changePassword = function (data) {
   })
 }
 
+// product specific ui
+const createNewProduct = function (data) {
+  if (debugApi) {
+    console.log(data)
+    console.log(`This is the current link ${appCurrentLink.apiUrl}`)
+  }
+
+  // adding owner to the product data
+  data.owner = store.userId
+  console.log(data)
+
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products`,
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    data: data
+  })
+}
+
 // Exports from api.js
 module.exports = {
   signUp: signUp,
   signIn: signIn,
   signOut: signOut,
-  changePassword: changePassword
+  changePassword: changePassword,
+  createNewProduct: createNewProduct
 }

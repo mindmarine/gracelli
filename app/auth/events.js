@@ -50,10 +50,24 @@ const onChangePassword = function (event) {
     .catch(ui.onChangePasswordFailure)
 }
 
+// Product specific events
+const onCreateNewProduct = function (event) {
+  event.preventDefault()
+  console.log('This is working on events for onCreateNewProduct function')
+  const form = event.target
+  console.log(form)
+  const data = getFormFields(form)
+  console.log(data)
+  api.createNewProduct(data)
+    .then(ui.createNewProductSuccess)
+    .catch(ui.createNewProductFailure)
+}
+
 // Exports from events.js
 module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,
   onSignOut: onSignOut,
-  onChangePassword: onChangePassword
+  onChangePassword: onChangePassword,
+  onCreateNewProduct: onCreateNewProduct
 }

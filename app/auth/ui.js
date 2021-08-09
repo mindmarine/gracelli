@@ -3,6 +3,8 @@
 const store = require('./../store')
 console.log(store)
 
+const debugUi = true
+
 // Auth related code
 
 const onSignUpSuccess = function (response) {
@@ -24,9 +26,11 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (response) {
   // console.log('Super')
   $('#status').text('Thank you for signing in', response.user.email)
-  // console.log(response)
+  console.log(response)
   // very important store the user token
   store.token = response.user.token
+  // add user id to the store
+  store.userId = response.user._id
   $('#sign-in').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -65,6 +69,21 @@ const onChangePasswordFailure = function () {
   $('#status').text('Password change was unsuccessful. Please try again')
 }
 
+// Products
+const createNewProductSuccess = function (response) {
+  $('#status').text('Thank you for adding a  new product', response)
+  if (debugUi) {
+    console.log(response)
+  }
+  store.token = response.user.token
+  $('#create-product-form').trigger('reset')
+}
+
+const createNewProductFailure = function () {
+  console.log('Not possible')
+  $('#status').text('Product creation failure')
+}
+
 module.exports = {
   // auth
   onSignUpSuccess: onSignUpSuccess,
@@ -74,5 +93,8 @@ module.exports = {
   onSignOutSuccess: onSignOutSuccess,
   onSignOutFailure: onSignOutFailure,
   onChangePasswordSuccess: onChangePasswordSuccess,
-  onChangePasswordFailure: onChangePasswordFailure
+  onChangePasswordFailure: onChangePasswordFailure,
+  // Product
+  createNewProductSuccess: createNewProductSuccess,
+  createNewProductFailure: createNewProductFailure
 }
