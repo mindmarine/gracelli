@@ -48,6 +48,7 @@ const changePassword = function (data) {
 }
 
 // product specific ui
+// Create new product
 const createNewProduct = function (data) {
   if (debugApi) {
     console.log(data)
@@ -56,11 +57,51 @@ const createNewProduct = function (data) {
 
   // adding owner to the product data
   data.owner = store.userId
-  console.log(data)
+  if (debugApi) {
+    // debug console.log to see the data before the AJAX POST Method
+    console.log('adding owner to the data', data)
+  }
 
   return $.ajax({
     url: `${appCurrentLink.apiUrl}/products`,
     method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    data: data
+  })
+}
+// Show all products
+const ShowAllProducts = function () {
+  const data = store.userId
+  if (debugApi) {
+    // debug console.log to see the data before the AJAX Get Method
+    console.log('sending owner', data)
+  }
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    data: data
+  })
+}
+
+// Show one product
+const ShowOneProduct = function (data) {
+  if (debugApi) {
+    console.log('Super')
+    console.log(data)
+  }
+  data.owner = store.userId
+  if (debugApi) {
+    // debug console.log to see the data before the AJAX Get Method
+    console.log('sending owner', data)
+  }
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products/${data.product._id}`,
+    method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.token
     },
@@ -74,5 +115,7 @@ module.exports = {
   signIn: signIn,
   signOut: signOut,
   changePassword: changePassword,
-  createNewProduct: createNewProduct
+  createNewProduct: createNewProduct,
+  ShowAllProducts: ShowAllProducts,
+  ShowOneProduct: ShowOneProduct
 }

@@ -15,4 +15,6 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   // product specific AJAX
   $('#create-product-form').on('submit', authEvents.onCreateNewProduct)
+  $('#all-products').on('click', authEvents.onShowAllProducts)
+  $('#one-product').on('submit', authEvents.onShowOneProduct)
 })

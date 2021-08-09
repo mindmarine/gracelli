@@ -51,6 +51,7 @@ const onChangePassword = function (event) {
 }
 
 // Product specific events
+// Create new product
 const onCreateNewProduct = function (event) {
   event.preventDefault()
   console.log('This is working on events for onCreateNewProduct function')
@@ -62,6 +63,25 @@ const onCreateNewProduct = function (event) {
     .then(ui.createNewProductSuccess)
     .catch(ui.createNewProductFailure)
 }
+// Show all products
+const onShowAllProducts = function (event) {
+  api.ShowAllProducts()
+    .then(ui.onShowAllProductsSuccess)
+    .catch(ui.onShowAllProductsFailure)
+}
+
+// Show one product
+const onShowOneProduct = function (event) {
+  event.preventDefault()
+  console.log('This is working on events for onShowOneProduct function')
+  const form = event.target
+  console.log(form)
+  const data = getFormFields(form)
+  console.log(data)
+  api.ShowOneProduct(data)
+    .then(ui.showOneProductSuccess)
+    .catch(ui.showOneProductFailure)
+}
 
 // Exports from events.js
 module.exports = {
@@ -69,5 +89,7 @@ module.exports = {
   onSignIn: onSignIn,
   onSignOut: onSignOut,
   onChangePassword: onChangePassword,
-  onCreateNewProduct: onCreateNewProduct
+  onCreateNewProduct: onCreateNewProduct,
+  onShowAllProducts: onShowAllProducts,
+  onShowOneProduct: onShowOneProduct
 }

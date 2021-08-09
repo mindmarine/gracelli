@@ -16,6 +16,10 @@
 </head>
 
 <body>
+  <div id="dashbaord">
+    <h3>Dashboard</h3>
+    <p id="status"></p>
+  </div>
 
   <h3>Account</h3>
   <!-- Sign Up -->
@@ -55,13 +59,15 @@
     <!-- is action the right action? -->
     <form id="create-product-form">
       <label for="name">Product name</label>
-      <input type="text" id="name" name="name" value=""><br>
+      <input id="name" name="product[name]" type="text" value=""><br>
       <label for="description">Description</label>
-      <input type="text" id="description" name="description" value=""><br>
+      <input id="description" name="product[description]" type="text" value=""><br>
+      <label for="sku">sku</label>
+      <input id="sku" name="product[sku]" type="text" value=""><br>
       <label for="price">Price</label>
-      <input type="text" id="price" name="price" value=""><br>
+      <input id="price" name="product[price]" type="text" value=""><br>
       <label for="units">Inventory</label>
-      <input type="text" id="units" name="units" value=""><br>
+      <input id="units" name="product[units]" type="text" value=""><br>
 
       <input type="submit" value="Add New Product">
     </form>
@@ -70,12 +76,25 @@
 
   <!-- <h3>Show All Products</h4> -->
   <div id="showcase-all-products">
-    <button id="all-products" type="button" class="nav-button">See All Products</button>
+    <button id="all-products" type="button">see all products</button>
+  </div>
+
+  <div id="prod-showcase">
+    <p id="productname"></p>
   </div>
 
   <!-- <h3>Show a Single Product</h4> -->
   <div id="show-one-product">
-    <button type="button" class="nav-button">See One Product</button>
+    <form id="one-product">
+      <label for="productid">Product Id</label>
+      <input id="productid" name="product[_id]" type="text" value=""><br>
+
+      <input type="submit" value="Show One Product">
+    </form>
+  </div>
+
+  <div id="one-product-showcase">
+    <p id="One product"></p>
   </div>
 
   <!-- Change product -->
@@ -91,6 +110,29 @@
   <div id="delete-product">
     <button id="delete-product-button" type="button">Delete product</button>
   </div>
+
+  <h3>Example product</h3>
+  <div class="row center">
+    <div class="card">
+      <a href="product.html">
+        <img class="medium" src="./public/p1.jpeg" alt="product" />
+      </a>
+      <div class="card-body">
+        <a href="product.html">
+          <h2>Nike Slim Shirts</h2>
+        </a>
+        <div class="rating">
+          <span> <i class="fa fa-star"></i> </span>
+          <span> <i class="fa fa-star"></i> </span>
+          <span> <i class="fa fa-star"></i> </span>
+          <span> <i class="fa fa-star"></i> </span>
+          <span> <i class="fa fa-star"></i> </span>
+        </div>
+        <div class="price">$120</div>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 
