@@ -107,6 +107,18 @@ const onDeleteProduct = function () {
     .catch(ui.onDeleteProductFailure)
 }
 
+const onUpdateProductFromScratch = function (event) {
+  event.preventDefault()
+  // console.log('This is working on events for onUpdateProductFromScratch function')
+  const form = event.target
+  // console.log(form)
+  const data = getFormFields(form)
+  // console.log(data)
+  api.updateProductFromScratch(data)
+    .then(ui.onUpdateProductFromScratchSuccess)
+    .catch(ui.onUpdateProductFromScratchFailure)
+}
+
 // Exports from events.js
 module.exports = {
   onSignUp: onSignUp,
@@ -118,5 +130,6 @@ module.exports = {
   onShowOneProduct: onShowOneProduct,
   onUpdateFeaturedProduct: onUpdateFeaturedProduct,
   onUpdateProduct: onUpdateProduct,
-  onDeleteProduct: onDeleteProduct
+  onDeleteProduct: onDeleteProduct,
+  onUpdateProductFromScratch: onUpdateProductFromScratch
 }

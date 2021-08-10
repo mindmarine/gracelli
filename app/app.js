@@ -19,6 +19,7 @@ $(() => {
   $('#one-product').on('submit', authEvents.onShowOneProduct)
   $('#update-product-button').on('click', authEvents.onUpdateFeaturedProduct)
   // $('#update-product-form').on('submit', authEvents.onUpdateOneProduct)
-  $('#update-product-form').on('submit', authEvents.onUpdateProduct)
+  $('#product-update-div').on('submit', '#update-product-form', authEvents.onUpdateProduct)
   $('#delete-product-button').on('click', authEvents.onDeleteProduct)
+  $('update-product-from-scratch-form').on('submit', authEvents.onUpdateProductFromScratch)
 })

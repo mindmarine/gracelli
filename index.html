@@ -53,10 +53,9 @@
 
   <!-- Products -->
   <h3>Products</h3>
-  <!-- <h3>Create New Product Form </h4> -->
+  <h3>Create New Product Form </h3>
   <div id="create-product">
     <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
-    <!-- is action the right action? -->
     <form id="create-product-form">
       <label for="name">Product name</label>
       <input id="name" name="product[name]" type="text" value=""><br>
@@ -103,27 +102,28 @@
     <button id="update-product-button" type="button">Update product</button>
   </div>
 
-  <div id="product-update-form">
+  <div id="product-update-div">
     <!-- This is populated dynamically -->
-    <!-- <h3>Change product</h3> -->
-    <div id="update-product">
-      <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
-      <!-- is action the right action? -->
-      <form id="update-product-form">
-        <label for="name">Product name</label>
-        <input id="updatename" name="product[name]" type="text" value="${data.product.name}"><br>
-        <label for="description">Description</label>
-        <input id="updatedescription" name="product[description]" type="text" value="${data.product.description}"><br>
-        <label for="sku">sku</label>
-        <input id="updatesku" name="product[sku]" type="text" value="${data.product.sku}"><br>
-        <label for="price">Price</label>
-        <input id="updateprice" name="product[price]" type="text" value="${data.product.price}"><br>
-        <label for="units">Inventory</label>
-        <input id="updateunits" name="product[units]" type="text" value="${data.product.units}"><br>
+  </div>
 
-        <input type="submit" value="Update Product">
-      </form>
-    </div>
+  <h3>Update product from scratch</h3>
+  <div id="update-product-from-scratch">
+    <form id="update-product-from-scratch-form">
+      <label for="id">product Id</label>
+      <input id="id" name="product[_id]" type="text" value=""><br>
+      <label for="name">Product name</label>
+      <input id="updatename" name="product[name]" type="text" value=""><br>
+      <label for="description">Description</label>
+      <input id="updatedescription" name="product[description]" type="text" value=""><br>
+      <label for="sku">sku</label>
+      <input id="updatesku" name="product[sku]" type="text" value=""><br>
+      <label for="price">Price</label>
+      <input id="updateprice" name="product[price]" type="text" value=""><br>
+      <label for="units">Inventory</label>
+      <input id="updateunits" name="product[units]" type="text" value=""><br>
+
+      <input type="submit" value="Update Product from Scratch">
+    </form>
   </div>
 
   <!-- Delete product -->

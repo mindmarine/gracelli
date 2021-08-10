@@ -154,6 +154,18 @@ const deleteProduct = function () {
     }
   })
 }
+// Update product from scratch
+const updateProductFromScratch = function (data) {
+  if (debugApi) console.log('In updateProductFromScratch function receiving form data is', data)
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products/${store.currentProductId}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    data: data
+  })
+}
 
 // Exports from api.js
 module.exports = {
@@ -166,5 +178,6 @@ module.exports = {
   ShowOneProduct: ShowOneProduct,
   updateFeaturedProduct: updateFeaturedProduct,
   updateProduct: updateProduct,
-  deleteProduct: deleteProduct
+  deleteProduct: deleteProduct,
+  updateProductFromScratch: updateProductFromScratch
 }

@@ -299,7 +299,7 @@ const onUpdateFeaturedProductSuccess = function (data) {
   `
   console.log(htmlToUpdateOneProduct)
 
-  $('#product-update-form').html(htmlToUpdateOneProduct)
+  $('#product-update-div').html(htmlToUpdateOneProduct)
   // store current product Id
   store.currentProductId = data.product._id
   console.log(store)
@@ -311,8 +311,8 @@ const onUpdateFeaturedProductFailure = function () {
 
 const onUpdateProductSuccess = function (data) {
   $('#status').text('You have updated one product successfully')
-  console.log('product ws updated successfully', data)
-  store.currentProductId = data.product._id
+  // console.log('product was updated successfully', data)
+  // store.currentProductId = data.product._id
 }
 
 const onUpdateProductFailure = function () {
