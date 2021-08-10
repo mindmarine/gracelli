@@ -16,146 +16,215 @@
 </head>
 
 <body>
-  <div id="dashbaord">
-    <h3>Dashboard</h3>
-    <p id="status"></p>
-  </div>
-
-  <h3>Account</h3>
-  <!-- Sign Up -->
-  <!-- <h3>Sign Up</h3> -->
-  <form id="sign-up">
-    <!-- <label class="form-label">your username</label> -->
-    <input name="credentials[email]" type="text" value="" autocomplete="off">
-    <input name="credentials[password]" type="password" autocomplete="off">
-    <input name="credentials[password_confirmation]" type="password" autocomplete="off">
-    <input type="submit" value="Sign Up" class="nav-button">
-  </form>
-  <!-- Sign In -->
-  <!-- <h3>Sign In</h3> -->
-  <form id="sign-in">
-    <input name="credentials[email]" type="text" autocomplete="off">
-    <input name="credentials[password]" type="password" autocomplete="off">
-    <input type="submit" value="Sign In" class="nav-button">
-  </form>
-  <!-- Sign Out -->
-  <!-- <h3>Sign Out</h3> -->
-  <div id="support-sign-out">
-    <button id="sign-out" type="button" class="nav-button">Sign Out</button>
-  </div>
-  <!-- Change password -->
-  <!-- <h3>Change password</h3> -->
-  <form id="change-password">
-    <input name="passwords[old]" type="password" autocomplete="off">
-    <input name="passwords[new]" type="password" autocomplete="off">
-    <input type="submit" value="Change password" class="nav-button">
-  </form>
-
-  <!-- Products -->
-  <h3>Products</h3>
-  <h3>Create New Product Form </h3>
-  <div id="create-product">
-    <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
-    <form id="create-product-form">
-      <label for="name">Product name</label>
-      <input id="name" name="product[name]" type="text" value=""><br>
-      <label for="description">Description</label>
-      <input id="description" name="product[description]" type="text" value=""><br>
-      <label for="sku">sku</label>
-      <input id="sku" name="product[sku]" type="text" value=""><br>
-      <label for="price">Price</label>
-      <input id="price" name="product[price]" type="text" value=""><br>
-      <label for="units">Inventory</label>
-      <input id="units" name="product[units]" type="text" value=""><br>
-
-      <input type="submit" value="Add New Product">
-    </form>
-
-  </div>
-
-  <!-- <h3>Show All Products</h3> -->
-  <div id="showcase-all-products">
-    <button id="all-products" type="button">see all products</button>
-  </div>
-
-  <div id="prod-showcase">
-    <p id="productname"></p>
-  </div>
-
-  <!-- <h3>Show a Single Product</h3> -->
-  <div id="show-one-product">
-    <form id="one-product">
-      <label for="productid">Product Id</label>
-      <input id="productid" name="product[_id]" type="text" value=""><br>
-
-      <input type="submit" value="Show One Product">
-    </form>
-  </div>
-
-  <div id="one-product-showcase">
-    <p id="One product"></p>
-  </div>
-
-  <!-- Update product -->
-  <!-- after finding a product the button to Update appears -->
-  <div id="update-product-start">
-    <button id="update-product-button" type="button">Update product</button>
-  </div>
-
-  <div id="product-update-div">
-    <!-- This is populated dynamically -->
-  </div>
-
-  <h3>Update product from scratch</h3>
-  <div id="update-product-from-scratch">
-    <form id="update-product-from-scratch-form">
-      <label for="id">product Id</label>
-      <input id="id" name="product[_id]" type="text" value=""><br>
-      <label for="name">Product name</label>
-      <input id="updatename" name="product[name]" type="text" value=""><br>
-      <label for="description">Description</label>
-      <input id="updatedescription" name="product[description]" type="text" value=""><br>
-      <label for="sku">sku</label>
-      <input id="updatesku" name="product[sku]" type="text" value=""><br>
-      <label for="price">Price</label>
-      <input id="updateprice" name="product[price]" type="text" value=""><br>
-      <label for="units">Inventory</label>
-      <input id="updateunits" name="product[units]" type="text" value=""><br>
-
-      <input type="submit" value="Update Product from Scratch">
-    </form>
-  </div>
-
-  <!-- Delete product -->
-  <!-- <h3>Delete product</h3> -->
-  <div id="delete-product">
-    <button id="delete-product-button" type="button">Delete product</button>
-  </div>
-
-  <h3>Example product</h3>
-  <div class="row center">
-    <div class="card">
-      <a href="product.html">
-        <img class="medium" src="./public/p1.jpeg" alt="product" />
-      </a>
-      <div class="card-body">
-        <a href="product.html">
-          <h2>Nike Slim Shirts</h2>
-        </a>
-        <div class="rating">
-          <span> <i class="fa fa-star"></i> </span>
-          <span> <i class="fa fa-star"></i> </span>
-          <span> <i class="fa fa-star"></i> </span>
-          <span> <i class="fa fa-star"></i> </span>
-          <span> <i class="fa fa-star"></i> </span>
-        </div>
-        <div class="price">$120</div>
+  <div class="grid-container">
+    <header class="row">
+      <div>
+        <a class="brand" href="index.html">gracelli</a>
       </div>
-    </div>
+      <div>
+        <button class="submit-input" id="cart-button" type="button">
+          Cart
+        </button>
+
+        <button class="submit-input" id="sign-in-button" type="button">
+          Sign In
+        </button>
+
+        <button class="submit-input" id="sign-up-button" type="button">
+          Sign Up
+        </button>
+      </div>
+    </header>
+    <main>
+      <div id="dashboard">
+        <h3>Dashboard</h3>
+        <p id="status"></p>
+      </div>
+
+      <h3>Account</h3>
+      <!-- Sign Up -->
+      <form class="form" id="sign-up">
+
+        <div>
+          <h1>Sign Up</h1>
+        </div>
+
+        <div>
+          <label for="credentials[email]">email address</label>
+          <input name="credentials[email]" type="text" value="" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="credentials[password]">password</label>
+          <input name="credentials[password]" type="password" autocomplete="off">
+        </div>
+        <div>
+          <label for="credentials[password_confirmation]">confirm password</label>
+          <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+        </div>
+        <div>
+          <input class="submit-input" type="submit" value="Sign Up">
+        </div>
+
+      </form>
+      <!-- Sign In -->
+      <!-- <h3>Sign In</h3> -->
+      <form class="form" id="sign-in">
+
+        <div>
+          <h1>Sign In</h1>
+        </div>
+
+        <div>
+          <label for="credentials[email]">email address</label>
+          <input name="credentials[email]" type="text" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="credentials[password]">password</label>
+          <input name="credentials[password]" type="password" autocomplete="off">
+        </div>
+
+        <div>
+          <input class="submit-input" type="submit" value="Sign In">
+        </div>
+
+      </form>
+
+      <!-- Sign Out -->
+      <!-- <h3>Sign Out</h3> -->
+      <div id="support-sign-out">
+
+        <button class="submit-input" id="sign-out" type="button">Sign Out</button>
+
+      </div>
+
+      <!-- Change password -->
+      <!-- <h3>Change password</h3> -->
+      <form class="form" id="change-password">
+
+        <div>
+          <label for="passwords[old]">old password</label>
+          <input name="passwords[old]" type="password" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="passwords[new]">new password</label>
+          <input name="passwords[new]" type="password" autocomplete="off">
+        </div>
+
+        <div>
+          <input type="submit" value="Change password" class="submit-input">
+        </div>
+
+      </form>
+
+      <!-- Products -->
+      <h3>Products</h3>
+      <h3>Create New Product Form </h3>
+      <div id="create-product">
+        <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
+        <form class="form" id="create-product-form">
+          <div>
+            <label for="name">Product name</label>
+            <input id="name" name="product[name]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="description">Description</label>
+            <input id="description" name="product[description]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="sku">sku</label>
+            <input id="sku" name="product[sku]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="price">Price</label>
+            <input id="price" name="product[price]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="units">Inventory</label>
+            <input id="units" name="product[units]" type="text" value="">
+          </div>
+
+          <div>
+            <input class="submit-input" type="submit" value="Add New Product">
+          </div>
+        </form>
+
+      </div>
+
+      <!-- <h3>Show All Products</h3> -->
+      <div id="showcase-all-products">
+        <button class="submit-input" id="all-products" type="button">see all products</button>
+      </div>
+
+      <div id="prod-showcase">
+        <p id="productname"></p>
+      </div>
+
+      <!-- <h3>Show a Single Product</h3> -->
+      <div id="show-one-product">
+        <form class="form" id="one-product">
+
+          <div>
+            <label for="productid">Product Id</label>
+            <input id="productid" name="product[_id]" type="text" value=""><br>
+          </div>
+          <div>
+            <input class="submit-input" type="submit" value="Show One Product">
+          </div>
+        </form>
+      </div>
+
+      <div id="one-product-showcase">
+        <p id="One product"></p>
+      </div>
+
+      <!-- Update product -->
+      <!-- after finding a product the button to Update appears -->
+      <div id="update-product-start">
+        <button class="submit-input" id="update-product-button" type="button">Update product</button>
+      </div>
+
+      <div id="product-update-div">
+        <!-- This is populated dynamically -->
+      </div>
+
+      <!-- Delete product -->
+      <!-- <h3>Delete product</h3> -->
+      <div id="delete-product">
+        <button class="submit-input" id="delete-product-button" type="button">Delete product</button>
+      </div>
+
+      <h3>Example product</h3>
+      <div class="row center">
+        <div class="card">
+          <a href="product.html">
+            <img class="medium" src="./public/p1.jpeg" alt="product" />
+          </a>
+          <div class="card-body">
+            <a href="product.html">
+              <h2>Nike Slim Shirts</h2>
+            </a>
+            <div class="rating">
+              <span> <i class="fa fa-star"></i> </span>
+              <span> <i class="fa fa-star"></i> </span>
+              <span> <i class="fa fa-star"></i> </span>
+              <span> <i class="fa fa-star"></i> </span>
+              <span> <i class="fa fa-star"></i> </span>
+            </div>
+            <div class="price">$120</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="row center">© mindmarine</footer>
   </div>
-
-
-
 </body>
 
 </html>
