@@ -109,6 +109,52 @@ const ShowOneProduct = function (data) {
   })
 }
 
+// Update featured product
+const updateFeaturedProduct = function () {
+  console.log(store.currentProductId)
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products/${store.currentProductId}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    }
+  })
+}
+
+// Update product via form
+const updateProduct = function (data) {
+  if (debugApi) {
+    console.log(data)
+    console.log(`This is the current link ${appCurrentLink.apiUrl}`)
+  }
+
+  // adding owner to the product data
+  data.owner = store.userId
+  if (debugApi) {
+    // debug console.log to see the data before the AJAX PATCH Method
+    console.log('adding owner to the data', data)
+  }
+
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products/${store.currentProductId}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    data: data
+  })
+}
+// delete Product
+const deleteProduct = function () {
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/products/${store.currentProductId}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    }
+  })
+}
+
 // Exports from api.js
 module.exports = {
   signUp: signUp,
@@ -117,5 +163,8 @@ module.exports = {
   changePassword: changePassword,
   createNewProduct: createNewProduct,
   ShowAllProducts: ShowAllProducts,
-  ShowOneProduct: ShowOneProduct
+  ShowOneProduct: ShowOneProduct,
+  updateFeaturedProduct: updateFeaturedProduct,
+  updateProduct: updateProduct,
+  deleteProduct: deleteProduct
 }

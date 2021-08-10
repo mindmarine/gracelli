@@ -82,6 +82,30 @@ const onShowOneProduct = function (event) {
     .then(ui.showOneProductSuccess)
     .catch(ui.showOneProductFailure)
 }
+// update one product
+const onUpdateFeaturedProduct = function () {
+  api.updateFeaturedProduct()
+    .then(ui.onUpdateFeaturedProductSuccess)
+    .catch(ui.onUpdateFeaturedProductFailure)
+}
+
+const onUpdateProduct = function (event) {
+  event.preventDefault()
+  console.log('This is working on events for onUpdateProduct function')
+  const form = event.target
+  console.log(form)
+  const data = getFormFields(form)
+  console.log(data)
+  api.updateProduct(data)
+    .then(ui.onUpdateProductSuccess)
+    .catch(ui.onUpdateProductFailure)
+}
+
+const onDeleteProduct = function () {
+  api.deleteProduct()
+    .then(ui.onDeleteProductSuccess)
+    .catch(ui.onDeleteProductFailure)
+}
 
 // Exports from events.js
 module.exports = {
@@ -91,5 +115,8 @@ module.exports = {
   onChangePassword: onChangePassword,
   onCreateNewProduct: onCreateNewProduct,
   onShowAllProducts: onShowAllProducts,
-  onShowOneProduct: onShowOneProduct
+  onShowOneProduct: onShowOneProduct,
+  onUpdateFeaturedProduct: onUpdateFeaturedProduct,
+  onUpdateProduct: onUpdateProduct,
+  onDeleteProduct: onDeleteProduct
 }

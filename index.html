@@ -74,7 +74,7 @@
 
   </div>
 
-  <!-- <h3>Show All Products</h4> -->
+  <!-- <h3>Show All Products</h3> -->
   <div id="showcase-all-products">
     <button id="all-products" type="button">see all products</button>
   </div>
@@ -83,7 +83,7 @@
     <p id="productname"></p>
   </div>
 
-  <!-- <h3>Show a Single Product</h4> -->
+  <!-- <h3>Show a Single Product</h3> -->
   <div id="show-one-product">
     <form id="one-product">
       <label for="productid">Product Id</label>
@@ -97,13 +97,34 @@
     <p id="One product"></p>
   </div>
 
-  <!-- Change product -->
-  <!-- <h3>Change product</h3> -->
-  <form id="update-product">
-    <input class="form-input" name="passwords[old]" type="password" autocomplete="off">
-    <input class="form-input" name="passwords[new]" type="password" autocomplete="off">
-    <input class="form-input" type="submit" value="Update product">
-  </form>
+  <!-- Update product -->
+  <!-- after finding a product the button to Update appears -->
+  <div id="update-product-start">
+    <button id="update-product-button" type="button">Update product</button>
+  </div>
+
+  <div id="product-update-form">
+    <!-- This is populated dynamically -->
+    <!-- <h3>Change product</h3> -->
+    <div id="update-product">
+      <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
+      <!-- is action the right action? -->
+      <form id="update-product-form">
+        <label for="name">Product name</label>
+        <input id="updatename" name="product[name]" type="text" value="${data.product.name}"><br>
+        <label for="description">Description</label>
+        <input id="updatedescription" name="product[description]" type="text" value="${data.product.description}"><br>
+        <label for="sku">sku</label>
+        <input id="updatesku" name="product[sku]" type="text" value="${data.product.sku}"><br>
+        <label for="price">Price</label>
+        <input id="updateprice" name="product[price]" type="text" value="${data.product.price}"><br>
+        <label for="units">Inventory</label>
+        <input id="updateunits" name="product[units]" type="text" value="${data.product.units}"><br>
+
+        <input type="submit" value="Update Product">
+      </form>
+    </div>
+  </div>
 
   <!-- Delete product -->
   <!-- <h3>Delete product</h3> -->
