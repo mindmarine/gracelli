@@ -218,6 +218,10 @@ const showOneProductSuccess = function (data) {
   $('#one-product-showcase').html(htmlToDisplayOneProduct)
 }
 
+const showOneProductFailure = function () {
+  $('#status').text('Show one product was unsuccessful')
+}
+
 module.exports = {
   // auth
   onSignUpSuccess: onSignUpSuccess,
@@ -233,5 +237,6 @@ module.exports = {
   createNewProductFailure: createNewProductFailure,
   onShowAllProductsSuccess: onShowAllProductsSuccess,
   onShowAllProductsFailure: onShowAllProductsFailure,
-  showOneProductSuccess: showOneProductSuccess
+  showOneProductSuccess: showOneProductSuccess,
+  showOneProductFailure: showOneProductFailure
 }
