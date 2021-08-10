@@ -17,6 +17,7 @@ const onSignUpSuccess = function (response) {
   $('#sign-in').show()
   $('#sign-up').hide()
   $('#sign-out').hide()
+  $('#sign-up-button').hide()
 }
 
 const onSignUpFailure = function () {
@@ -37,9 +38,10 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-out').show()
-  $('#change-password').show()
-  $('#all-games').show()
-  $('#create-game').show()
+  $('#change-password-button').show()
+  // nav buttons
+  $('#sign-up-button').hide()
+  $('#sign-in-button').hide()
 }
 
 const onSignInFailure = function () {
@@ -54,8 +56,9 @@ const onSignOutSuccess = function () {
   $('#sign-up').show()
   $('#sign-out').hide()
   $('#change-password').hide()
-  $('#create-game').hide()
-  $('#all-games').hide()
+  $('#change-password-button').hide()
+  $('#sign-up-button').show()
+  $('#sign-in-button').show()
 }
 
 const onSignOutFailure = function () {
@@ -65,6 +68,7 @@ const onSignOutFailure = function () {
 const onChangePasswordSuccess = function () {
   $('#status').text('You have changed your password. Please remember the new password')
   $('#change-password').trigger('reset')
+  $('#change-password').hide()
 }
 
 const onChangePasswordFailure = function () {
@@ -112,14 +116,8 @@ const onShowAllProductsSuccess = function (data) {
   //    </div>
   let htmlToDisplayAllProducts = ''
   // htmlToDisplayAllProducts +=
-  // // start grid-container div
-  // '<div class="grid-container"> <main> <div> <div class="row center">'
-
-  /*
-    <div class="grid-container">
-    <main>
-      <div>
-  */
+  // // start a container div for all products
+  // '<div class="row center">'
 
   // add start of wrapper div
   for (let i = 0; i < data.products.length; i++) {
@@ -152,11 +150,10 @@ const onShowAllProductsSuccess = function (data) {
       </div>
     `
     // add end of the div that wraps around all products
-    // add ending to grid-container div
-    // htmlToDisplayAllProducts += '</div></main></div></div>'
+    // htmlToDisplayAllProducts += '</div>'
     console.log(htmlToDisplayAllProducts)
 
-    $('#showcase-all-products').html(htmlToDisplayAllProducts)
+    $('#all-products-showcase-for-owner').html(htmlToDisplayAllProducts)
   }
 }
 

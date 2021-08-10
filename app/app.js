@@ -14,6 +14,7 @@ $(() => {
   $('#sign-in').hide()
   $('#sign-out').hide()
   $('#change-password').hide()
+  $('#change-password-button').hide()
   // Auth
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -28,5 +29,21 @@ $(() => {
   $('#product-update-div').on('submit', '#update-product-form', authEvents.onUpdateProduct)
   $('#delete-product-button').on('click', authEvents.onDeleteProduct)
   $('update-product-from-scratch-form').on('submit', authEvents.onUpdateProductFromScratch)
-  $('#sign-up-button').on('click', $('#sign-up').show())
+
+  // Nav button toggle
+  $('#sign-up-button').on('click', function () {
+    $('#sign-up').toggle('slow', function () {
+      // Animation complete
+    })
+  })
+  $('#sign-in-button').on('click', function () {
+    $('#sign-in').toggle('slow', function () {
+      // Animation complete
+    })
+  })
+  $('#change-password-button').on('click', function () {
+    $('#change-password').toggle('slow', function () {
+      // Animation complete
+    })
+  })
 })

@@ -13,15 +13,20 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
 </head>
 
 <body>
   <div class="grid-container">
     <header class="row">
       <div>
+        <button class="submit-input" id="hamburger-button" type="button">
+          <i class="fa fa-bars"></i>
+        </button>
         <a class="brand" href="index.html">gracelli</a>
       </div>
       <div>
+
         <button class="submit-input" id="cart-button" type="button">
           Cart
         </button>
@@ -33,9 +38,36 @@
         <button class="submit-input" id="sign-up-button" type="button">
           Sign Up
         </button>
+
+        <button class="submit-input" id="change-password-button" type="button">
+          New pass
+        </button>
+
+        <!-- Sign Out -->
+
+        <button class="submit-input" id="sign-out" type="button">
+          Sign Out
+        </button>
       </div>
+
     </header>
+
     <main>
+      <div id="menu">
+
+        <!-- <h3>Show All Products</h3> -->
+        <div id="showcase-all-products">
+          <button class="submit-input" id="all-products" type="button">see all products</button>
+        </div>
+
+        <a href="">New Product</a>
+        <a href="">Show All Products</a>
+        <a href="">Show One Product</a>
+        <a href="">Show All Products</a>
+        <a href="">Update One Product</a>
+        <a href="">Delete One Product</a>
+      </div>
+
       <div id="dashboard">
         <h3>Dashboard</h3>
         <p id="status"></p>
@@ -90,14 +122,6 @@
         </div>
 
       </form>
-
-      <!-- Sign Out -->
-      <!-- <h3>Sign Out</h3> -->
-      <div id="support-sign-out">
-
-        <button class="submit-input" id="sign-out" type="button">Sign Out</button>
-
-      </div>
 
       <!-- Change password -->
       <!-- <h3>Change password</h3> -->
@@ -157,10 +181,7 @@
 
       </div>
 
-      <!-- <h3>Show All Products</h3> -->
-      <div id="showcase-all-products">
-        <button class="submit-input" id="all-products" type="button">see all products</button>
-      </div>
+      <!-- placeholder for generating the update form content -->
 
       <div id="prod-showcase">
         <p id="productname"></p>
@@ -180,8 +201,12 @@
         </form>
       </div>
 
-      <div id="one-product-showcase">
+      <div id="one-product-showcase" class="row center">
         <p id="One product"></p>
+      </div>
+
+      <div id="all-products-showcase-for-owner" class="row center">
+        <p id="All product show for this owner"></p>
       </div>
 
       <!-- Update product -->

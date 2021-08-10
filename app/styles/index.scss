@@ -27,7 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #1f7c0c;
 }
 main {
   grid-area: main;
@@ -35,7 +35,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #1f7c0c;
   color: #ffffff;
 }
 /* Common */
@@ -75,7 +75,10 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 button {
-  background-color: #f8f8f8;
+  background-color: #1f7c0c;
+  border-color: black;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
 }
 input:hover,
@@ -86,7 +89,9 @@ button:hover {
 }
 
 .submit-input {
-  background-color: #f0c040;
+  background-color: #1f7c0c;
+  color: white;
+  font-weight: bold;
 }
 button.primary {
   background-color: #f0c040;
