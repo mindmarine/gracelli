@@ -2,7 +2,6 @@
 
 ## shopping and eCommerce with a twist
 
-
 # App Frontend
 [gracelli](https://mindmarine.github.io/gracelli/)
 
@@ -10,33 +9,97 @@
 [gracelli repository](https://github.com/mindmarine/gracelli)
 
 # Objective
+Create a modern eCommerce website for sellers and a wonderful experience for customers
 
-Create a game for Isabella to improve her Tic Tac Toe skills so she could spend more time playing this game with her daughter at a competitive level
+# Project Idea
 
-# App Plan and Research
+eCommerce with a twist. This is at the intersection of etsy and amazon. It is like etsy in the sense it promotes smaller stores as well
+Researched couple of ideas and came up with this. I'm trying to challenge myself.
+Seeing how eCommerce is done can help me develop other projects.
+User 1: Customers. They would use it for buying things they need while supporting the local economy or stores they care about
+User 2: Store Owners. Expand their reach beyond their local appeal or footprint.
 
-## Users Stories
+# User stories
 
-- As Isabella I would like to be able to practice Tic Tac Toe by myself
-- In order to spend more time with my daughter as a mother I would like to improve my Tic Tac Toe skills
-- In order to increase my Tic Tac Toe skills as mother I would like to be able to practice the game by myself
-- As Isabella I would like to be able to practice Tic Tac Toe alone
-- As Isabella I would like to be able to sign up for the game
-- In order to start the game as Isabella (mother) I would like to be able to sign up
-- In order to hide my practice of the game from my daughter as Isabella I would like to be able to sing out from the game
-- In order to practice I would like to be able to play Tic Tac Toe as both player
-- In order to understand what is on my daughter mind I would like to play by myself (to take turns playing Tic Tac Toe
-- In order to increase my Tic Tac Toe playing skills I would like to be able to start the game
-- In order to understand how I am progressing as Isabella I would like to understand which of the two me (which one) of the players I play with wins
+Users (store owners) need to be able to add products to sale
+Users (customers) need to be able to search for products and and them to the shopping cart
+All users would need to be able to create an account, sign in, change passwords etc.
 
-## Wireframe
-![Tic Tac Toe for Isabella wireframe](public/images/wireframe_tictactoe_for_isabella.png "Tic Tac Toe for Isabella wireframe")
+
+# Timetable
+
+- Day 1 - > planning, 
+- Day 2 - > server, API and routes
+- Day 3 - > frontend and other aspects
+- Day 4 - > UX
+
+
+# Wireframe
+![gracelli wireframe](public/wireframe.png "gracelli wireframe")
+
+# Entity Relationship Diagram
+
+![gracelli ERD](/Users/aqua/sei/projects/gracelli-client/public/Eccomerce_Entity_Relationship_Diagram.png "gracelli entity relationship diagram")
+
 
 # Technologies used
+Frontend
 - HTML
 - CSS
 - javascript
-- bootstrap
+- CSS Grid
 - FlexBox
 - API AJAX
-- API Heroku
+- github platform
+
+Server side
+- javascript
+- MongoDB
+- Mongoose
+- Heroku platform
+- github platform
+  
+# Backend Resources
+
+### products
+- name: String, 
+- description: String, 
+- sku: String, 
+- price: Number
+- image: File
+- units: Number
+
+### Shopping Cart
+- shoppingCart: Number
+- totalAmount: Number
+
+### Stores
+- storeName: String
+- storeTagline: String
+- storeDescription: String
+- storeKeywords: String
+
+### Order
+- orderNumber: Number
+- orderDate: Date
+- orderAmount: Number
+- orderDiscount: Number
+
+### Shipping
+- shippingNumber:  Number
+- shippingAddress: String
+- shippingCity: String
+- shippingCountry: String
+
+
+## Routing & versions
+
+### v1
+- user routes
+- product routes
+v2
+- store routes
+v3
+- shopping cart
+v4
+- order

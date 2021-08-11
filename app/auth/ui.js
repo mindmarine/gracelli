@@ -132,7 +132,7 @@ const onShowAllProductsSuccess = function (data) {
     `
       <div class="card">
         <a href="product.html">
-          <img class="medium" src="./public/p1.jpeg" alt="product" />
+          <img class="medium" src="./public/laptop_003.jpg" alt="product" />
         </a>
         <div class="card-body">
           <a href="product.html">
@@ -200,7 +200,7 @@ const showOneProductSuccess = function (data) {
     `
       <div class="card">
         <a href="product.html">
-          <img class="medium" src="./public/p1.jpeg" alt="product" />
+          <img class="medium" src="./public/laptop_002.jpg" alt="product" />
         </a>
         <div class="card-body">
           <a href="product.html">
