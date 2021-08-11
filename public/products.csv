@@ -1,0 +1,25 @@
+id,name ,description,sku ,price,units,reviews,image,image2
+1,Corner desk,Corned desk featured with a lamp,desks_001,2459,10000001,5,public/desks_001.jpg,./public/desks_001.jpg
+2,Standup desk,modern desk with standing capabilities,desks_002,459,125,4.5,public/desks_002.jpg,./public/desks_002.jpg
+3,Poster,Inspiration poster,inspiration_001,49,101,3,public/inspiration_001.jpg,./public/inspiration_001.jpg
+4,Abstract poster,Universe,inspiration_002,49,101,4,public/inspiration_002.jpg,./public/inspiration_002.jpg
+5,Swan reflection,This is the good swan,inspiration_003,49,101,5,public/inspiration_003.jpg,./public/inspiration_003.jpg
+6,Explosive color,Can you concentrate?,inspiration_004,49,101,2,public/inspiration_004.jpg,./public/inspiration_004.jpg
+7,Mac laptop,laptop ona flat surface,laptop_001,49,101,3,public/laptop_001.jpg,./public/laptop_001.jpg
+8,Mac laptop mini,Mini laptop while browsing,laptop_002,49,101,4,public/laptop_002.jpg,./public/laptop_002.jpg
+9,Mac BookPro,Very powerful laptop for editing,laptop_003,49,101,5,public/laptop_003.jpg,./public/laptop_003.jpg
+10,Dell Laptop,Featuring Windows,laptop_004,49,101,3.7,public/laptop_004.jpg,./public/laptop_004.jpg
+11,Medical mask,They are very important,masks_001,49,101,2.7,public/masks_001.jpg,./public/masks_001.jpg
+12,Planets poster,Blue tone poster,poster_0011,49,101,4.2,public/poster_001.jpeg,./public/poster_001.jpeg
+13,Apples bunch,Keeps the doctor away,poster_001,49,101,5,public/poster_001.jpg,./public/poster_001.jpg
+14,Rainbow poster,You would want to travel there,poster_002,49,101,3,public/poster_002.jpg,./public/poster_002.jpg
+15,Berries bunch,You should eat some each week,poster_003,49,101,4,public/poster_003.jpg,./public/poster_003.jpg
+16,Project Check Poster,Reminder about daily todos list,poster_004,49,101,3.3,public/poster_004.jpg,./public/poster_004.jpg
+17,Flowers bouquet,No Comment,poster_005,49,101,4.5,public/poster_005.jpg,./public/poster_005.jpg
+18,Color poster,Intersection in a big city,poster_006,49,101,2.3,public/poster_006.jpg,./public/poster_006.jpg
+19,Music instrument poster,Is it Stradivarius?,poster_007,49,101,5,public/poster_007.jpg,./public/poster_007.jpg
+20,Impressing fa�ade poster,Travel from your home,poster_008,49,101,5,public/poster_008.jpg,./public/poster_008.jpg
+21,Tea pot and cup, Chamomill blends with this teacup,poster_009,49,101,4,public/poster_009.jpg,./public/poster_009.jpg
+22,Mountain landscape poster,grass blending with snow landscape,poster_010,49,101,3,public/poster_010.jpg,./public/poster_010.jpg
+23,Construction site poster,Green gloves and red had,poster_011,49,101,3.4,public/poster_011.jpg,./public/poster_011.jpg
+24,Parrot poster,"Blue, yellow, green parrot",poster_012,49,101,4.5,public/poster_012.jpg,./public/poster_012.jpg

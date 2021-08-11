@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>gracelli shopping with a twist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="row">
+      <div>
+        <button class="submit-input" id="hamburger-button" type="button">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="brand" href="index.html">gracelli</a>
+      </div>
+      <div>
+
+        <button class="submit-input" id="cart-button" type="button">
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+
+
+        <button class="submit-input" id="sign-in-button" type="button">
+          Sign In
+        </button>
+
+        <button class="submit-input" id="sign-up-button" type="button">
+          Sign Up
+        </button>
+
+        <button class="submit-input" id="change-password-button" type="button">
+          New pass
+        </button>
+
+        <!-- Sign Out -->
+        <button class="submit-input" id="sign-out" type="button">
+          Sign Out
+        </button>
+      </div>
+
+    </header>
+
+    <main>
+      <div class="row" id="menu">
+
+        <button class="submit-input" id="add-new-product-button" type="button">
+          add new product
+        </button>
+
+        <!-- <h3>Show All Products</h3> -->
+        <div id="showcase-all-products">
+          <button class="submit-input" id="all-products" type="button">see all products</button>
+        </div>
+
+        <button class="submit-input" id="show-one-product-button" type="button">
+          show one product
+        </button>
+
+        <!-- Update product -->
+        <!-- after finding a product the button to Update appears -->
+        <div id="update-product-start">
+          <button class="submit-input" id="update-product-button" type="button">update product</button>
+        </div>
+
+        <!-- Delete product -->
+        <!-- <h3>Delete product</h3> -->
+        <div id="delete-product">
+          <button class="submit-input" id="delete-product-button" type="button">delete product</button>
+        </div>
+      </div>
+
+      <div class="row" id="dashboard">
+        <h3>shopping and eCommerce with a twist</h3>
+        <p id="status"></p>
+      </div>
+
+      <!-- <h3>Account</h3> -->
+      <!-- Sign Up -->
+      <form class="form" id="sign-up">
+
+        <div>
+          <h1>Sign Up</h1>
+        </div>
+
+        <div>
+          <label for="credentials[email]">email address</label>
+          <input name="credentials[email]" type="text" value="" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="credentials[password]">password</label>
+          <input name="credentials[password]" type="password" autocomplete="off">
+        </div>
+        <div>
+          <label for="credentials[password_confirmation]">confirm password</label>
+          <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+        </div>
+        <div>
+          <input class="submit-input" type="submit" value="Sign Up">
+        </div>
+
+      </form>
+      <!-- Sign In -->
+      <!-- <h3>Sign In</h3> -->
+      <form class="form" id="sign-in">
+
+        <div>
+          <h1>Sign In</h1>
+        </div>
+
+        <div>
+          <label for="credentials[email]">email address</label>
+          <input name="credentials[email]" type="text" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="credentials[password]">password</label>
+          <input name="credentials[password]" type="password" autocomplete="off">
+        </div>
+
+        <div>
+          <input class="submit-input" type="submit" value="Sign In">
+        </div>
+
+      </form>
+
+      <!-- Change password -->
+      <!-- <h3>Change password</h3> -->
+      <form class="form" id="change-password">
+
+        <div>
+          <label for="passwords[old]">old password</label>
+          <input name="passwords[old]" type="password" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="passwords[new]">new password</label>
+          <input name="passwords[new]" type="password" autocomplete="off">
+        </div>
+
+        <div>
+          <input type="submit" value="Change password" class="submit-input">
+        </div>
+
+      </form>
+
+      <!-- Products -->
+      <!-- <h3>Products</h3> -->
+      <div id="create-product">
+        <h3 class="centered-headline">Create New Product Form </h3>
+        <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
+        <form class="form" id="create-product-form">
+          <div>
+            <label for="name">Product name</label>
+            <input id="name" name="product[name]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="description">Description</label>
+            <input id="description" name="product[description]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="sku">sku</label>
+            <input id="sku" name="product[sku]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="price">Price</label>
+            <input id="price" name="product[price]" type="text" value="">
+          </div>
+
+          <div>
+            <label for="units">Inventory</label>
+            <input id="units" name="product[units]" type="text" value="">
+          </div>
+
+          <div>
+            <input class="submit-input" type="submit" value="Add New Product">
+          </div>
+        </form>
+
+      </div>
+
+      <!-- placeholder for generating the update form content -->
+
+      <div id="prod-showcase">
+        <p id="productname"></p>
+      </div>
+
+      <!-- <h3>Show a Single Product</h3> -->
+      <div id="show-one-product">
+        <h3 class="centered-headline">Choose the id of the product to show</h3>
+        <form class="form" id="one-product">
+
+          <div>
+            <label for="productid">Product Id</label>
+            <input id="productid" name="product[_id]" type="text" value=""><br>
+          </div>
+          <div>
+            <input class="submit-input" type="submit" value="Show One Product">
+          </div>
+        </form>
+      </div>
+
+      <div id="one-product-showcase" class="row center">
+        <p id="One product"></p>
+      </div>
+
+      <div id="all-products-showcase-for-owner" class="row center">
+        <p id="All product show for this owner"></p>
+      </div>
+
+      <div id="product-update-div">
+        <!-- This is populated dynamically -->
+      </div>
+
+      <!-- starter public products -->
+      <div class="row center" id="products-for-the-public">
+      </div>
+
+    </main>
+    <footer class="row center">© mindmarine</footer>
+  </div>
+</body>
+
+</html>
