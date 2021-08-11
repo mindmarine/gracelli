@@ -5,7 +5,7 @@ const appCurrentLink = require('./../config')
 const store = require('./../store')
 
 // turn debugging ON/OFF
-const debugApi = true
+const debugApi = false
 
 const signUp = function (data) {
   // console.log(data)

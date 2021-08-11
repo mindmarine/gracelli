@@ -5,6 +5,9 @@ const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 
+// debug variable
+const debugEvents = false
+
 // Check this STORE ?!?
 // const store = require('./../store')
 
@@ -56,9 +59,9 @@ const onCreateNewProduct = function (event) {
   event.preventDefault()
   console.log('This is working on events for onCreateNewProduct function')
   const form = event.target
-  console.log(form)
+  if (debugEvents) console.log(form)
   const data = getFormFields(form)
-  console.log(data)
+  if (debugEvents) console.log(data)
   api.createNewProduct(data)
     .then(ui.createNewProductSuccess)
     .catch(ui.createNewProductFailure)
@@ -73,11 +76,11 @@ const onShowAllProducts = function (event) {
 // Show one product
 const onShowOneProduct = function (event) {
   event.preventDefault()
-  console.log('This is working on events for onShowOneProduct function')
+  if (debugEvents) console.log('This is working on events for onShowOneProduct function')
   const form = event.target
-  console.log(form)
+  if (debugEvents) console.log(form)
   const data = getFormFields(form)
-  console.log(data)
+  if (debugEvents) console.log(data)
   api.ShowOneProduct(data)
     .then(ui.showOneProductSuccess)
     .catch(ui.showOneProductFailure)
@@ -91,11 +94,11 @@ const onUpdateFeaturedProduct = function () {
 
 const onUpdateProduct = function (event) {
   event.preventDefault()
-  console.log('This is working on events for onUpdateProduct function')
+  if (debugEvents) console.log('This is working on events for onUpdateProduct function')
   const form = event.target
-  console.log(form)
+  if (debugEvents) console.log(form)
   const data = getFormFields(form)
-  console.log(data)
+  if (debugEvents) console.log(data)
   api.updateProduct(data)
     .then(ui.onUpdateProductSuccess)
     .catch(ui.onUpdateProductFailure)

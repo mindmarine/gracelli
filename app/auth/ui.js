@@ -3,9 +3,9 @@
 const store = require('./../store')
 console.log(store)
 
-const debugUi = true
+const debugUi = false
 const debugAuth = false
-const debugProduct = true
+const debugProduct = false
 
 // Auth related code
 
@@ -159,7 +159,7 @@ const onShowAllProductsSuccess = function (data) {
     `
     // add end of the div that wraps around all products
     // htmlToDisplayAllProducts += '</div>'
-    console.log(htmlToDisplayAllProducts)
+    if (debugUi && debugProduct) console.log(htmlToDisplayAllProducts)
 
     // hide and seek
     $('#all-products-showcase-for-owner').hide()
@@ -236,7 +236,7 @@ const showOneProductSuccess = function (data) {
   $('#one-product-showcase').html(htmlToDisplayOneProduct)
   // store current product Id
   store.currentProductId = data.product._id
-  console.log(store)
+  if (debugUi && debugProduct) console.log(store)
 }
 
 const showOneProductFailure = function () {
@@ -340,7 +340,7 @@ const onUpdateFeaturedProductSuccess = function (data) {
   $('#product-update-div').html(htmlToUpdateOneProduct)
   // store current product Id
   store.currentProductId = data.product._id
-  console.log(store)
+  if (debugUi && debugProduct) console.log(store)
 }
 
 const onUpdateFeaturedProductFailure = function () {

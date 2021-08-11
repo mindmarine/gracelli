@@ -6,7 +6,7 @@
 
 const sampleProducts = require('../data/products.js')
 const showProductToThePublic = sampleProducts.generatePublicProducts
-console.log(showProductToThePublic)
+// console.log(showProductToThePublic)
 
 const authEvents = require('./auth/events.js')
 
