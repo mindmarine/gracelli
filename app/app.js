@@ -4,6 +4,10 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+const sampleProducts = require('../data/products.js')
+const showProductToThePublic = sampleProducts.generatePublicProducts
+console.log(showProductToThePublic)
+
 const authEvents = require('./auth/events.js')
 
 $(() => {
@@ -60,4 +64,6 @@ $(() => {
       // Animation complete
     })
   })
+  // show products to the public and all internet
+  $('#products-for-the-public').html(showProductToThePublic)
 })
