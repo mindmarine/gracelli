@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
 html {
   font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -217,5 +219,21 @@ img.large {
 }
 
 .centered-headline {
+  text-align: center;
+}
+
+#menu {
+  background-color: #1f7c0c;
+  padding: 10px;
+}
+
+#dashboard {
+  background-color: #1f7c0c;
+  color: white;
+  padding: 10px;
+  font-family: "Gochi Hand", cursive;
+}
+
+#dashboard.p {
   text-align: center;
 }

@@ -60,6 +60,12 @@ const onSignOutSuccess = function () {
   $('#change-password-button').hide()
   $('#sign-up-button').show()
   $('#sign-in-button').show()
+  // hide and seek
+  $('#all-products-showcase-for-owner').hide()
+  $('#create-product').hide()
+  $('#one-product-showcase').hide()
+  $('#product-update-div').hide()
+  $('#menu').hide()
 }
 
 const onSignOutFailure = function () {
