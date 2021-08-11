@@ -42,6 +42,7 @@ const onSignInSuccess = function (response) {
   // nav buttons
   $('#sign-up-button').hide()
   $('#sign-in-button').hide()
+  $('#menu').show()
 }
 
 const onSignInFailure = function () {
@@ -153,6 +154,13 @@ const onShowAllProductsSuccess = function (data) {
     // htmlToDisplayAllProducts += '</div>'
     console.log(htmlToDisplayAllProducts)
 
+    // hide and seek
+    $('#all-products-showcase-for-owner').hide()
+    $('#create-product').hide()
+    $('#one-product-showcase').hide()
+    $('#product-update-div').hide()
+    // show current
+    $('#all-products-showcase-for-owner').show()
     $('#all-products-showcase-for-owner').html(htmlToDisplayAllProducts)
   }
 }
@@ -211,7 +219,13 @@ const showOneProductSuccess = function (data) {
       </div>
     `
   console.log(htmlToDisplayOneProduct)
-
+  // hide and seek
+  $('#all-products-showcase-for-owner').hide()
+  $('#create-product').hide()
+  $('#one-product-showcase').hide()
+  $('#product-update-div').hide()
+  // show current
+  $('#one-product-showcase').show()
   $('#one-product-showcase').html(htmlToDisplayOneProduct)
   // store current product Id
   store.currentProductId = data.product._id
@@ -223,7 +237,7 @@ const showOneProductFailure = function () {
 }
 
 const onUpdateFeaturedProductSuccess = function (data) {
-  $('#status').text('You have got one product successfully')
+  $('#status').text('Please review and update this product')
   if (debugUi && debugProduct) {
     // Data for all products
     console.log(typeof data)
@@ -273,29 +287,49 @@ const onUpdateFeaturedProductSuccess = function (data) {
     `
   */
     `
-    <!-- <h3>Change product</h3> -->
   <div id="update-product">
-    <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
-    <!-- is action the right action? -->
-    <form id="update-product-form">
-      <label for="name">Product name</label>
-      <input id="updatename" name="product[name]" type="text" value="${data.product.name}"><br>
-      <label for="description">Description</label>
-      <input id="updatedescription" name="product[description]" type="text" value="${data.product.description}"><br>
-      <label for="sku">sku</label>
-      <input id="updatesku" name="product[sku]" type="text" value="${data.product.sku}"><br>
-      <label for="price">Price</label>
-      <input id="updateprice" name="product[price]" type="text" value="${data.product.price}"><br>
-      <label for="units">Inventory</label>
-      <input id="updateunits" name="product[units]" type="text" value="${data.product.units}"><br>
 
-      <input type="submit" value="Update Product">
+    <form id="update-product-form" class="form">
+      <div>
+      <label for="name">Product name</label>
+      <input id="updatename" name="product[name]" type="text" value="${data.product.name}">
+      </div>
+
+      <div>
+      <label for="description">Description</label>
+      <input id="updatedescription" name="product[description]" type="text" value="${data.product.description}">
+      </div>
+
+      <div>
+      <label for="sku">sku</label>
+      <input id="updatesku" name="product[sku]" type="text" value="${data.product.sku}">
+      </div>
+
+      <div>
+      <label for="price">Price</label>
+      <input id="updateprice" name="product[price]" type="text" value="${data.product.price}">
+      </div>
+
+      <div>
+      <label for="units">Inventory</label>
+      <input id="updateunits" name="product[units]" type="text" value="${data.product.units}">
+      </div>
+
+      <div>
+      <input class="submit-input" type="submit" value="Update Product">
+      </div>
     </form>
   </div>
 
   `
   console.log(htmlToUpdateOneProduct)
-
+  // hide and seek
+  $('#all-products-showcase-for-owner').hide()
+  $('#create-product').hide()
+  $('#one-product-showcase').hide()
+  $('#product-update-div').hide()
+  // show current
+  $('#product-update-div').show()
   $('#product-update-div').html(htmlToUpdateOneProduct)
   // store current product Id
   store.currentProductId = data.product._id

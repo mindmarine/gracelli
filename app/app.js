@@ -15,6 +15,9 @@ $(() => {
   $('#sign-out').hide()
   $('#change-password').hide()
   $('#change-password-button').hide()
+  $('#create-product').hide()
+  $('#show-one-product').hide()
+  $('#menu').hide()
   // Auth
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -43,6 +46,17 @@ $(() => {
   })
   $('#change-password-button').on('click', function () {
     $('#change-password').toggle('slow', function () {
+      // Animation complete
+    })
+  })
+  $('#add-new-product-button').on('click', function () {
+    // hide and seek
+    $('#create-product').toggle('slow', function () {
+      // Animation complete
+    })
+  })
+  $('#show-one-product-button').on('click', function () {
+    $('#show-one-product').toggle('slow', function () {
       // Animation complete
     })
   })

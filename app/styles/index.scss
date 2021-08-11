@@ -76,7 +76,7 @@ button {
 }
 button {
   background-color: #1f7c0c;
-  border-color: black;
+  border-color: white;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -85,7 +85,9 @@ input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  border: 0.1rem #404040 solid;
+  border: 0.1rem black solid;
+  background-color: white;
+  color: #1f7c0c;
 }
 
 .submit-input {
@@ -212,4 +214,8 @@ img.large {
 .form label {
   margin: 1rem 0;
   display: block;
+}
+
+.centered-headline {
+  text-align: center;
 }

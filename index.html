@@ -28,8 +28,9 @@
       <div>
 
         <button class="submit-input" id="cart-button" type="button">
-          Cart
+          <i class="fa fa-shopping-cart"></i>
         </button>
+
 
         <button class="submit-input" id="sign-in-button" type="button">
           Sign In
@@ -44,7 +45,6 @@
         </button>
 
         <!-- Sign Out -->
-
         <button class="submit-input" id="sign-out" type="button">
           Sign Out
         </button>
@@ -53,19 +53,32 @@
     </header>
 
     <main>
-      <div id="menu">
+      <div class="row" id="menu">
+
+        <button class="submit-input" id="add-new-product-button" type="button">
+          add new product
+        </button>
 
         <!-- <h3>Show All Products</h3> -->
         <div id="showcase-all-products">
           <button class="submit-input" id="all-products" type="button">see all products</button>
         </div>
 
-        <a href="">New Product</a>
-        <a href="">Show All Products</a>
-        <a href="">Show One Product</a>
-        <a href="">Show All Products</a>
-        <a href="">Update One Product</a>
-        <a href="">Delete One Product</a>
+        <button class="submit-input" id="show-one-product-button" type="button">
+          show one product
+        </button>
+
+        <!-- Update product -->
+        <!-- after finding a product the button to Update appears -->
+        <div id="update-product-start">
+          <button class="submit-input" id="update-product-button" type="button">update product</button>
+        </div>
+
+        <!-- Delete product -->
+        <!-- <h3>Delete product</h3> -->
+        <div id="delete-product">
+          <button class="submit-input" id="delete-product-button" type="button">delete product</button>
+        </div>
       </div>
 
       <div id="dashboard">
@@ -73,7 +86,7 @@
         <p id="status"></p>
       </div>
 
-      <h3>Account</h3>
+      <!-- <h3>Account</h3> -->
       <!-- Sign Up -->
       <form class="form" id="sign-up">
 
@@ -144,9 +157,9 @@
       </form>
 
       <!-- Products -->
-      <h3>Products</h3>
-      <h3>Create New Product Form </h3>
+      <!-- <h3>Products</h3> -->
       <div id="create-product">
+        <h3 class="centered-headline">Create New Product Form </h3>
         <!-- <button id="new-product" type="button" class="nav-button">Add New Product</button> -->
         <form class="form" id="create-product-form">
           <div>
@@ -189,6 +202,7 @@
 
       <!-- <h3>Show a Single Product</h3> -->
       <div id="show-one-product">
+        <h3 class="centered-headline">Choose the id of the product to show</h3>
         <form class="form" id="one-product">
 
           <div>
@@ -209,42 +223,8 @@
         <p id="All product show for this owner"></p>
       </div>
 
-      <!-- Update product -->
-      <!-- after finding a product the button to Update appears -->
-      <div id="update-product-start">
-        <button class="submit-input" id="update-product-button" type="button">Update product</button>
-      </div>
-
       <div id="product-update-div">
         <!-- This is populated dynamically -->
-      </div>
-
-      <!-- Delete product -->
-      <!-- <h3>Delete product</h3> -->
-      <div id="delete-product">
-        <button class="submit-input" id="delete-product-button" type="button">Delete product</button>
-      </div>
-
-      <h3>Example product</h3>
-      <div class="row center">
-        <div class="card">
-          <a href="product.html">
-            <img class="medium" src="./public/p1.jpeg" alt="product" />
-          </a>
-          <div class="card-body">
-            <a href="product.html">
-              <h2>Nike Slim Shirts</h2>
-            </a>
-            <div class="rating">
-              <span> <i class="fa fa-star"></i> </span>
-              <span> <i class="fa fa-star"></i> </span>
-              <span> <i class="fa fa-star"></i> </span>
-              <span> <i class="fa fa-star"></i> </span>
-              <span> <i class="fa fa-star"></i> </span>
-            </div>
-            <div class="price">$120</div>
-          </div>
-        </div>
       </div>
 
     </main>
