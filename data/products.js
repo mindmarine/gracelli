@@ -141,8 +141,8 @@ const productsSampleExamples =
     price: 49,
     units: 101,
     reviews: 5,
-    image: 'public/poster_001.jpg',
-    image2: './public/poster_001.jpg'
+    image: 'public/poster_011.jpg',
+    image2: './public/poster_011.jpg'
   },
   {
     id: 14,

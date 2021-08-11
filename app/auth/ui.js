@@ -64,6 +64,7 @@ const onSignOutSuccess = function () {
   $('#all-products-showcase-for-owner').hide()
   $('#create-product').hide()
   $('#one-product-showcase').hide()
+  $('#one-product-showcase').hide()
   $('#product-update-div').hide()
   $('#menu').hide()
 }
